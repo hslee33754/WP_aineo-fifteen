@@ -22,7 +22,34 @@
 
 <!-- Start Script -->
 <script>	
-        
+
+    
+// lightbox jquery //
+$(function() {	  
+    $('.gallery').each(function() { // the containers for all your galleries. - multiple galleryies on one page.
+        $(this).magnificPopup({
+            delegate: 'a', // child items selector, by clicking on it popup will open
+            type: 'image', //type option: image, ifram, inline, ajax - No auto detection. it is required.
+            tLoading: 'Loading image #%curr%...', // String that contains classes that will be added to the root element of popup wrapper and to dark overlay.
+            mainClass: 'mfp-img-mobile', // String that contains classes that will be added to the root element of popup wrapper and to dark overlay.
+            gallery: { 
+                enabled: true, // allows you to switch content of popup and adds navigation arrows
+                navigateByImgClick: true,
+                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: { 
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.', // Error message
+                titleSrc: function(item) {
+                    return item.el.attr('title') + '<small>by Jin Kim</small>';
+                    // Title attribute of the target element that contains caption for the slide.
+                }
+            }
+        });
+    });
+});
+//  End Lightbox jquery //    
+
+    
 // include Fullpage js for front-page //
 $(function() {
     $('#fullpage').fullpage({
@@ -64,31 +91,7 @@ $(function() {
         });	
 });		
 // End custom toggle jquery //	
-	
-// lightbox jquery //
-$(function() {	  
-    $('.gallery').each(function() { // the containers for all your galleries. - multiple galleryies on one page.
-        $(this).magnificPopup({
-            delegate: 'a', // child items selector, by clicking on it popup will open
-            type: 'image', //type option: image, ifram, inline, ajax - No auto detection. it is required.
-            tLoading: 'Loading image #%curr%...', // String that contains classes that will be added to the root element of popup wrapper and to dark overlay.
-            mainClass: 'mfp-img-mobile', // String that contains classes that will be added to the root element of popup wrapper and to dark overlay.
-            gallery: { 
-                enabled: true, // allows you to switch content of popup and adds navigation arrows
-                navigateByImgClick: true,
-                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-            },
-            image: { 
-                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.', // Error message
-                titleSrc: function(item) {
-                    return item.el.attr('title') + '<small>by Jin Kim</small>';
-                    // Title attribute of the target element that contains caption for the slide.
-                }
-            }
-        });
-    });
-});
-//  End Lightbox jquery //    
+
     
 </script>
 <!-- End Script -->    
