@@ -35,6 +35,41 @@ function get_my_js(){
     echo $my_js;
 }
 
+function get_portfolios(){
+    $subPages = get_children( array(
+        'post_parent' => get_the_ID(),
+        'post_type' => 'page',
+        'order' =>'ASC',
+        'orderby' => 'menu_order'
+    ));
+    
+    $portfolio_box = '';
+    $theNumber = 1;    
+
+    foreach ($subPages as $subPage_id => $subPage){
+        
+        $thePermalink = get_permalink($subPage_id);
+        $theTitle = get_the_title($subPage_id);
+        
+        $portfolio_box .='
+            <h3 id="tab'.$theNumber.'"><a href="'.$thePermalink.'">'.$theTitle.'</a></h3>
+            <div id ="box'.$theNumber.'" class="wrap opened gallery">
+            <img class="up" id="up'.$theNumber.'" src="'.get_bloginfo('template_directory').'/images/up.png" alt="up">
+        ';
+        
+        $theNumber++;
+    } //end foreach
+        
+    /*
+    echo '<pre>';
+    var_dump($subPages);
+    echo '</pre>';
+    */
+    
+    return $portfolio_box;
+}//end function
+
+add_shortcode( 'portfolios', 'get_portfolios');
 
 function get_portfolio(){
     $attachments = get_children( array(

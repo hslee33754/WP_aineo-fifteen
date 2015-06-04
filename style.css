@@ -271,15 +271,14 @@ footer small{
 	display:block;
 }
 
-
-.item-title{
+article h3{
 	clear:both;
 	display:block;
 	border-bottom:1px solid #85B1B8;
 	padding:8px 0;
 }
 
-.item-title:hover{
+article h3:hover{
 	color:#666;
 }
 
