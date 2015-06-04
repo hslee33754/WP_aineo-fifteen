@@ -8,11 +8,11 @@ Version:1.0
 */
 
 //Register My Menus
-
 register_nav_menus(array(
     'main-menu' => __('Main'),
 ));
 //
+
 
 //Create function for using multiple css
 function get_front_css(){    
@@ -25,6 +25,7 @@ function get_front_css(){
 }
 
 
+//Create function for using multiple js
 function get_my_js(){
     $my_js ='';
     if(is_front_page()){
@@ -35,6 +36,8 @@ function get_my_js(){
     echo $my_js;
 }
 
+
+//Create function for getting portfolios from subpages
 function get_portfolios(){
     $subPages = get_children( array(
         'post_parent' => get_the_ID(),
@@ -71,6 +74,8 @@ function get_portfolios(){
 
 add_shortcode( 'portfolios', 'get_portfolios');
 
+
+//Create function for gallery type portfolios using light box jquery
 function get_portfolio(){
     $attachments = get_children( array(
         'post_parent' => get_the_ID(),
@@ -110,5 +115,43 @@ function get_portfolio(){
 }//end get gallery function
 
 add_shortcode( 'portfolio', 'get_portfolio');
+
+
+// For adding custom field to gallery popup 
+function add_image_attachment_fields_to_edit($form_fields, $post) {
+    
+    // $form_fields is a an array of fields to include in the attachment form
+    // $post is nothing but attachment record in the database
+    // $post->post_type == 'attachment'
+    // attachments are considered as posts in WordPress. So value of post_type in wp_posts table will be attachment
+    // now add our custom field to the $form_fields array
+    // input type="text" name/id="attachments[$attachment->ID][custom1]"
+  
+    $form_fields["category"] = array(
+    "label" => __("Category"),
+    "input" => "text", // this is default if "input" is omitted
+    "value" => get_post_meta($post->ID, "_category", true),
+    "helps" => __("Category is a custom field."),
+    );
+    
+    return $form_fields;
+}
+
+// now attach our function to the hook
+add_filter("attachment_fields_to_edit", "add_image_attachment_fields_to_edit", null, 2);
+
+function add_image_attachment_fields_to_save($post, $attachment) {
+    // $attachment part of the form $_POST ($_POST[attachments][postID])
+    // $post['post_type'] == 'attachment'
+    if( isset($attachment['category']) ){
+        // update_post_meta(postID, meta_key, meta_value);
+        update_post_meta($post['ID'], '_category', $attachment['category']);
+    }
+    return $post;
+}
+
+// now attach our function to the hook.
+add_filter("attachment_fields_to_save", "add_image_attachment_fields_to_save", null , 2);
+
 
 ?>
