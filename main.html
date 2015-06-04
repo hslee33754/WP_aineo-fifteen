@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>AINEO CREATIVE LAB - Porfolio</title>
+ 		<meta charset="UTF-8" />
+ 		<meta name="viewport" content="width=device-width" />
+        <meta name="robots" content="noindex,nofollow"/> <!-- Delete this line when this page goes live.-->
+        <link rel="stylesheet" type="text/css" href="css/aineo.css" />
+		<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">        <!-- Enable media queries for old IE -->
+        <!--[if lt IE 9]>
+   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ 		<![endif]-->
+       
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+       
+        <script src="js/jquery.magnific-popup.js"></script>        
+    </head>
+    <body>
+    	<header>
+        	<div class="logo_container">
+            	<a href="index.php"><!-- <img class="logo" src="" alt="" /> -->AINEO CREATIVE LAB</a>
+            </div>
+            <div class="sub_logo_container">
+            	<a href="index.php"><!-- <img class="logo" src="" alt="" /> -->ACL</a>
+            </div>
+            <nav class="main_nav">
+            	<ul>
+            		<li><a href="index.php">Home</a></li>
+<li class="current"><a href="portfolio.php">Portfolio</a></li>
+<li><a href="services.php">Services</a></li>
+<li><a href="products.php">Products</a></li>
+<li><a href="aboutus.php">About Us</a></li>
+<li><a href="contactus.php"></a></li>
+            	</ul>
+            </nav>
+        </header>
+<script>
+	
+// Tab for toggling (open / close) box // 		
+	$(function() {
+		$( "#tab1" ).click(function(){
+			$("#box1").slideToggle(600, "swing");
+			});	
+		$( "#tab2" ).click(function(){
+			$("#box2").slideToggle(600, "swing");
+			});		
+		$( "#tab3" ).click(function(){
+			$("#box3").slideToggle(600, "swing");
+			});	
+		$( "#tab4" ).click(function(){
+			$("#box4").slideToggle(600, "swing");
+			});	
+	
+		// botton for hiding box //
+		$( "#up1" ).click(function(){
+			$("#box1").hide(600, "swing");
+			});	
+		$( "#up2" ).click(function(){
+			$("#box2").hide(600, "swing");
+			});		
+		$( "#up3" ).click(function(){
+			$("#box3").hide(600, "swing");
+			});	
+		$( "#up4" ).click(function(){
+			$("#box4").hide(600, "swing");
+			});	
+	});		
+	
+	
+// lightbox jquery //
+	$(function() {	  
+	  	$('.gallery').each(function() { // the containers for all your galleries. - multiple galleryies on one page.
+			$(this).magnificPopup({
+				delegate: 'a', // child items selector, by clicking on it popup will open
+				type: 'image', //type option: image, ifram, inline, ajax - No auto detection. it is required.
+				tLoading: 'Loading image #%curr%...', // String that contains classes that will be added to the root element of popup wrapper and to dark overlay.
+				mainClass: 'mfp-img-mobile', // String that contains classes that will be added to the root element of popup wrapper and to dark overlay.
+				gallery: { 
+					enabled: true, // allows you to switch content of popup and adds navigation arrows
+					navigateByImgClick: true,
+					preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+				},
+				image: { 
+					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.', // Error message
+					titleSrc: function(item) {
+						return item.el.attr('title') + '<small>by Jin Kim</small>';
+						// Title attribute of the target element that contains caption for the slide.
+					}
+				}
+			});
+		});
+	});
+</script>
+
+
+
+        <section>
+        	<div class="banner" id="banner-portfolio"></div>
+            <article>
+            <div class="article-padding">   
+                <h2 class="pageid">Portfolio</h2>     	
+                <div id="container">
+                    <h3 id="tab1">Wedding Photos</h3>
+                    <div id="box1" class="wrap opened gallery">
+                    	<div class="box">
+                           <a href="images/wedding/01.jpg" title="John & Ariel's wedding">
+                           <div class="innerContent"  style="background-image: url(images/wedding/01.jpg); ">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                           <a href="images/wedding/02.jpg" title="John & Ariel's wedding">
+                           	<div class="innerContent"  style="background-image: url(images/wedding/02.jpg); "></div>
+                           </a>
+                        </div>
+                        <div class="box">
+                           <a href="images/wedding/03.jpg" title="John & Ariel's wedding">
+                           <div class="innerContent" style="background-image: url(images/wedding/03.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/wedding/04.jpg" title="Jinny & David's wedding">
+                           <div class="innerContent" style="background-image: url(images/wedding/04.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/wedding/05.jpg" title="Jinny & David's wedding">
+                           <div class="innerContent" style="background-image: url(images/wedding/05.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/wedding/06.jpg" title="Jinny & David's wedding">
+                           <div class="innerContent" style="background-image: url(images/wedding/06.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/wedding/07.jpg" title="Jinny & David's wedding">
+                           <div class="innerContent" style="background-image: url(images/wedding/07.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/wedding/08.jpg" title="Sei's wedding">
+                           <div class="innerContent" style="background-image: url(images/wedding/08.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/wedding/09.jpg" title="Sei's wedding">
+                           <div class="innerContent" style="background-image: url(images/wedding/09.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/wedding/10.jpg" title="Sei's wedding">
+                           <div class="innerContent" style="background-image: url(images/wedding/10.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                    <img class="up" id="up1" src="images/up.png" alt="up">
+                    </div>
+                
+                    <h3 id="tab2">Engagement Photos</h3>
+                    <div id="box2" class="wrap closed gallery">
+                    	<div class="box">
+                           <a href="images/engagement/16.jpg" title="John & Ariel's engagement">
+                           <div class="innerContent"  style="background-image: url(images/engagement/16.jpg); ">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                           <a href="images/engagement/15.jpg" title="John & Ariel's engagement">
+                           <div class="innerContent"  style="background-image: url(images/engagement/15.jpg); ">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/14.jpg" title="John & Ariel's engagement">
+                           	<div class="innerContent" style="background-image: url(images/engagement/14.jpg);">
+                           	</div>
+                           	</a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/13.jpg" title="John & Ariel's engagement">
+                           	<div class="innerContent" style="background-image: url(images/engagement/13.jpg);">
+                           	</div>
+                           	</a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/12.jpg" title="Christal's engagement">
+                           	<div class="innerContent" style="background-image: url(images/engagement/12.jpg);">
+                           	</div>
+                           	</a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/11.jpg" title="Christal's engagement">
+                           	<div class="innerContent" style="background-image: url(images/engagement/11.jpg);">
+                           	</div>
+                           	</a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/10.jpg" title="Sei's engagement">
+                           	<div class="innerContent" style="background-image: url(images/engagement/10.jpg);">
+                           	</div>
+                            </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/09.jpg" title="Sei's engagement">
+                           	<div class="innerContent" style="background-image: url(images/engagement/09.jpg);">
+                           	</div>
+                            </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/08.jpg" title="Sei's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/08.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/07.jpg" title="Sei's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/07.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/06.jpg" title="Sei's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/06.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/05.jpg" title="Sei's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/05.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/04.jpg" title="Sei's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/04.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/03.jpg" title="Sei's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/03.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/02.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/02.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/01.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/01.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                    <img class="up" id="up2" src="images/up.png" alt="up">
+                    </div>
+    
+                    <h3 id="tab3">Commercial Photography</h3>
+                    <div id="box3" class="wrap closed gallery">
+                        <div class="box">
+                           <a href="images/engagement/09.jpg" title="Christal's engagement">
+                           <div class="innerContent"  style="background-image: url(images/engagement/09.jpg); ">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/01.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/01.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/02.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/02.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/03.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/03.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/04.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/04.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/05.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/05.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/06.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/06.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/07.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/07.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                        <div class="box">
+                        	<a href="images/engagement/08.jpg" title="Christal's engagement">
+                           <div class="innerContent" style="background-image: url(images/engagement/08.jpg);">
+                           </div>
+                           </a>
+                        </div>
+                    <img class="up" id="up3" src="images/up.png" alt="up">
+                    </div>
+                </div>
+                <!-- end wrap -->
+            </div>
+            </article>
+       	
+        <!--
+        <aside>
+            <a href="https://www.facebook.com/aclseattle" target="_blank"><img src="images/icon_fb.png" alt="facebook" /></a>
+            <a href="http://www.aineocreativelab.com/clients.html" target="_blank"><img src="images/icon_lock.png" alt="customer access" /></a>
+            <a href="#" onclick="contactUs()"><img src="images/icon_email.png" alt="contact us" /></a>
+        </aside>
+        
+        -->
+        <footer>
+            <small>&copy; 2015 Aineo Creative Lab by Jin Kim, All Rights Reserved | <a href="http://validator.w3.org/check/referer" target="_blank">Valid HTML</a> | <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a> 
+            </small>
+        </footer>
+        </section>
+        <script>
+		function contactUs() {
+			window.open("contactus.php","","width=340,height=700");
+			}
+		</script>
+    </body>
+</html>

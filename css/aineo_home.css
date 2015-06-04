@@ -1,0 +1,201 @@
+/* Style for our header texts 
+* --------------------------------------- */
+html, body, section{
+	height:100%;
+	margin:0;
+	padding: 0;
+}
+
+header{
+	position:fixed;
+	top:0;
+}
+section{
+	overflow:hidden;
+	position:fixed;
+	width:100%;
+	top:0;
+	background:none;
+}
+
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+
+p{
+	font-size: 2em;
+	margin:0;
+}
+
+h1{
+	font-size: 5em;	
+	font-family: arial,helvetica;
+	font-weight:normal;
+	color: #fff;
+	margin:0;
+	padding:0;
+	text-shadow:0px 0px 8px #aaa;
+}
+
+footer{
+	display:block;
+	width:100%;
+	z-index:9000;
+	position:fixed;
+	bottom:0px;
+}
+
+footer small{
+	width:90%;
+	margin: 0 auto;
+}
+
+
+/* Centered texts in each section 
+* --------------------------------------- */
+.section{
+	text-align:center;
+	box-sizing: border-box;
+	position: relative;
+	height:200%;
+}
+
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+#section0,
+#section1,
+#section2,
+#section3{
+	background-size: cover;
+}
+
+/* Defining each sectino background and styles 
+* --------------------------------------- */
+#section0{
+	background-image: url(../images/wedding1.jpg);
+	padding: 30% 0 0 0;
+}
+#section1{
+	background-image: url(../images/wedding2.jpg);
+	padding: 30% 0 0 0;
+}
+#section2{
+	background-image: url(../images/wedding3.jpg);
+	padding: 30% 0 0 0;
+}
+#section3{
+	background-image: url(../images/wedding4.jpg);
+	padding: 30% 0 0 0;
+}
+
+/* fullpage-nav style
+* --------------------------------------- */
+#fullPage-nav {
+	position: fixed;
+	z-index: 100;
+	margin-top: -32px;
+	top: 50%;
+	opacity: 1;
+}
+#fullPage-nav.right {
+	right: 1em;
+}
+#fullPage-nav.left {
+	left: 1em;
+}
+.fullPage-slidesNav {
+	position: absolute;
+	z-index: 4;
+	left: 50%;
+	opacity: 1;
+}
+.fullPage-slidesNav.bottom {
+	bottom: 1em;
+}
+.fullPage-slidesNav.top {
+	top: 1em;
+}
+#fullPage-nav ul,
+.fullPage-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fullPage-nav li,
+.fullPage-slidesNav li {
+	display: block;
+	width: 14px;
+	height: 13px;
+	margin: 7px;
+	position:relative;
+}
+.fullPage-slidesNav li {
+	display: inline-block;
+}
+#fullPage-nav li a,
+.fullPage-slidesNav li a {
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+}
+#fullPage-nav li .active span,
+.fullPage-slidesNav .active span {
+	background: #333;
+}
+#fullPage-nav span,
+.fullPage-slidesNav span {
+	top: 2px;
+	left: 2px;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #000;
+	background: rgba(0, 0, 0, 0);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+}
+.fullPage-tooltip {
+	position: absolute;
+	color: #fff;
+	font-size: 14px;
+	font-family: arial, helvetica, sans-serif;
+	top: -2px;
+}
+.fullPage-tooltip.right {
+	right: 20px;
+}
+.fullPage-tooltip.left {
+	left: 20px;
+}
+/* Overwriting fullPage.js tooltip color black to gray
+* --------------------------------------- */
+.fullPage-tooltip{
+	color: #AAA;
+}
+#fullPage-nav span, .fullPage-slidesNav span{
+	border-color: #AAA;
+}
+#fullPage-nav li .active span, .fullPage-slidesNav .active span{
+	background: #AAA;
+}
+
+
+@media all and (max-width : 480px) {
+/* Smartphone view */
+	  h1 {
+		font-size:4.5em;
+	  }
+	  p{
+	  	font-soze:1.8em;
+	  }
+	  
+	  
+	}

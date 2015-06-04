@@ -1,0 +1,566 @@
+/*
+Theme Name: Aineo Fifteen
+Theme URI: 
+Author: Kate Lee
+Author URI: http://kateleeseattle.com
+Description: This is a theme for Aineo Creative Lab. 
+Version: 1.0
+License: 
+License URI:
+Tags: 
+Text Domain: 
+
+*/
+
+
+/* ===================================================================================================== */	
+/*                                  WORDPRESS CORE STYLES                                                */
+/* ===================================================================================================== */	
+
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+* {
+	margin:0;
+	padding:0;
+}
+
+html{
+	height:100%;
+}
+
+body {
+	background-color:#fff;
+	width:100%;
+	height:100%;
+	min-width:320px;
+	min-height:100%;
+	overflow:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:0.9em;
+	color:#666;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color:#679DA6;
+	margin:0.6em 0;
+}
+
+a{
+	color:#999;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#679DA6;
+}
+
+/* Header Style */
+header{
+	background-color:rgba(255,255,255,0.9);
+	width:100%;
+	z-index:10000;
+	position:fixed;
+	top:0;
+}
+
+	.logo_container{
+		float:left;
+		display:block;
+		margin:2em;
+	}
+	.sub_logo_container{
+		display:none;
+	}
+	/* Global Nav Style */
+	.main_nav{
+		float:right;
+		margin:2em;
+	}
+	.main_nav ul li{
+		list-style:none;
+		display:inline-block;
+		padding:0 20px;
+	}
+	.main_nav a{
+		text-decoration: none;
+		color:#679DA6;
+	}
+	.main_nav a:hover{
+		color:#666;
+	}
+	.main_nav .current a{
+		color:#666;
+	}
+
+
+/*Section */
+section{
+	width:100%;
+	height:100%;
+	background: url(../images/articlebg.png) center top;
+	background-size:100%;
+	background-repeat:repeat-y;
+	overflow:auto;
+}
+
+.banner{
+	height:40%;
+	overflow:auto;
+}
+
+
+/*
+#banner-aboutus{
+	background: url(/images/aboutus.jpg) no-repeat center center; 
+	background-size:cover;
+}
+
+#banner-products{
+	background: url(../images/products.jpg) no-repeat center center;
+	background-size:cover;
+}
+
+#banner-services{
+	background: url(../images/services.jpg) no-repeat center center;
+	background-size:cover;
+}
+
+#banner-portfolio{
+	background: url(../images/portfolio.jpg) no-repeat center center;
+	background-size:cover;
+}
+*/
+
+article{
+	min-height:60%;
+	margin-bottom:-2.2em;
+}
+.article-padding{
+	padding:1em 1em 4em 1em;
+}
+
+.up{
+	clear:left;
+	display:block;
+	float:right;
+}
+
+.opend{
+	display:block;
+}
+
+.closed{
+	display:none;
+}
+
+footer{
+	clear:both;
+	background-color:rgba(180,180,180,0.8);
+	font-size:0.9em;
+	padding: 0.7em 1em;
+	text-align:center;
+	color:#fff;
+}
+
+footer small{
+	display:block;
+}
+
+
+.item-title{
+	clear:both;
+	display:block;
+	border-bottom:1px solid #85B1B8;
+	padding:8px 0;
+}
+
+.item-title:hover{
+	color:#666;
+}
+
+#container{
+	width:96%;
+	margin: 0 auto;
+}
+
+article div.col1, article div.col2{
+	float:left;
+	width:32.05%;
+	margin:1em 1.92% 1em 0;
+}
+
+article div.col3{
+	float:right;
+	width:32.05%;
+	margin:1em 0;
+}
+
+table{
+	background-color:#679DA6;
+	color:#fff;	
+	margin:1em 0;
+	width:100%;
+	border-collapse:collapse;
+}
+
+tr.em{
+	background-color:#344E53;
+}
+
+tr.em2{
+	background-color:#527E85;
+}
+
+td{
+	font-size:0.9em;
+	padding:0.5em;
+	text-align:center;
+	border-right: 0.5px solid #85B1B8;
+	border-bottom: 0.5px solid #85B1B8;
+}
+
+td:nth-child(1){
+	width:25%;
+}
+
+td .small{
+	font-size:0.7em;
+}
+
+.center{
+	text-align:center;
+}
+
+.one-column-table{
+	margin-left:10%;
+	width:80%;
+}
+
+.left-half-table{
+	margin-left:10%;
+	width:39%;
+	float:left;
+}
+
+.right-half-table{
+	margin-right:10%;
+	width:39%;
+	float:right;
+}
+
+/* Gallery Styles */
+.wrap{
+	overflow:hidden;
+}
+
+.box {
+   width: 16.6%;
+   color: #eee;
+   padding-bottom: 16.6%;
+   position: relative;
+   float: left;
+
+}
+
+.innerContent {
+	background-size:cover;
+   	padding: 10px;
+   	position: absolute;
+	top: 1px;
+    right: 1px;
+	bottom: 1px;
+    left: 1px;
+}
+
+
+/* Etc */
+aside{
+	display:block;
+	background-color:#679DA6;
+	z-index:5000;
+	height:152px;
+	width:48px;
+	position:fixed;
+	top:10em;
+	right:0;
+	padding:0;
+}
+
+footer small a{
+	color:#fff;
+	
+}
+
+
+/* DESKTOP AND TABLET LANDSCAPE */
+@media all and (max-width:860px) {
+	
+	/* Responsive Nave Layout - Nav starts to overlay */ 
+	
+	header{
+		min-height:3em;
+		text-align:center;
+	}
+	.logo_container{
+		float:right;
+		margin:1em 2em 1em 0;
+	}
+	.main_nav {
+		float:left;
+		margin:0px;
+		min-width:200px;
+		padding:1em 1em 0 1em;
+	}	
+	.main_nav ul{
+		background: url(../images/icon-menu.png) no-repeat 0.3em 0.3em;
+		text-align:left;
+	}
+	.main_nav ul li{
+		display:block;
+		padding-left:2em;
+	}
+	.main_nav li a{
+		display:none; /* hide all <li> items */
+	}
+	.main_nav li.current a{
+		display: block; /* show only current <li> item */
+		color: #666;
+	} 
+	
+	/* on nav hover */
+	.main_nav:hover {
+		background-color:rgba(255,255,255,0.4);
+	}
+	.main_nav ul:hover {
+		background-image: none;
+	}
+	
+	.main_nav ul:hover li{
+		display: block;
+		padding-top:0.6em;
+		padding-bottom:1em;
+		border-bottom: 1px solid #fff;
+	}
+	.main_nav ul:hover a{
+		display: inline-block;	
+	}
+	.main_nav a:hover {
+		color: #666;
+	}
+	.main_nav ul:hover li.current {
+		background: url(../images/icon-check.png) no-repeat 0.3em 0.9em;
+	}
+	
+
+	
+	/* aside relocate */
+	aside{
+		top:3.2em;
+	}
+	
+	
+}
+
+/* TABLET PORTRAIT LAYOUT  */
+@media all and (max-width:768px) {
+	
+	
+	/* Inside of Article Column style: 2 column */
+	article div.col1{
+		float:left;
+		width:49.04%;
+	}
+	
+	article div.col2{
+		float:right;
+		width:49.04%;
+		margin-right:0;
+	}
+	
+	article div.col3{
+		clear:both;
+		float:none;
+		width:auto;
+	}
+	
+	.one-column-table{
+		margin-left:0;
+		width:100%;
+	}
+	
+	.left-half-table{
+		margin-left:0;
+		width:100%;
+		float:none;
+	}
+	
+	.right-half-table{
+		margin-right:0;
+		width:100%;
+		float:none;
+	}
+
+}
+
+
+/* Responsive PHONE LAYOUT  */
+@media all and (max-width:480px) {
+	.logo_container{
+		display:none;
+	}
+	.sub_logo_container{
+		display:block;
+		float:right;
+		margin:1em 2em 1em 0;
+	}
+	
+	/* Inside of Article Column style: 1 column */
+	article div.col1, article div.col2, article div.col3{
+		float:left;
+		width:96%;
+	}
+
+	
+}
+
+
+/*Responsive Gallery */
+	
+	@media all and (min-width : 1051px) and (max-width : 1290px) {
+		/* Medium desktop: 4 tiles */
+	  .box {
+		width: 20%;
+		padding-bottom: 20%;
+	  }
+	}
+	
+	@media all and (min-width : 651px) and (max-width : 1050px){
+		/* Small desktop / ipad view: 3 tiles */
+	  .box {
+		width: 25%;
+		padding-bottom: 25%;
+	  }
+	}
+	
+	@media all and (min-width : 481px) and (max-width : 650px) {
+	  /* Tablet view: 2 tiles */
+	  .box {
+		width: 33.3%;
+		padding-bottom: 33.3%;
+	  }
+	}
+	@media all and (max-width : 480px) {
+	  /* Smartphone view: 1 tile */
+	  .box {
+		width: 50%;
+		padding-bottom: 50%;
+	  }
+	}
+		
+    
+    
